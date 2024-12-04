@@ -139,7 +139,7 @@ p {
     linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2));
     background-blend-mode: multiply;
     background-size: cover;
-    background-position: right center;        
+    background-position: center center;        
     
     z-index: -1;     
 }
