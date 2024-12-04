@@ -9,7 +9,7 @@
     content: "";
 
     position: absolute;
-    top: -10%;    
+    top: var(--bgScroll);    
     left: -10%;
     width: 120%;
     height: 120%;
@@ -21,7 +21,7 @@
     background-blend-mode: darken;
     filter: blur(10px);
     
-    z-index: -1;    
+    z-index: -1;
 }
 
 #parallax-fg {

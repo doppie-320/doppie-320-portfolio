@@ -23,6 +23,8 @@ blockquote,
 li {
     margin-top: 0.2em;
     margin-bottom: 0.2em;
+
+    text-shadow: 0 0 5px rgba(0,0,0, 0.5);
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -68,33 +70,96 @@ p {
     grid-template-columns: 1fr 1fr;
 }
 
-#sect2 {
-    background-color: #afb8c7;    
+#sect2 {    
     grid-template-columns: 1fr 1fr;    
+
+    position: relative;
+    overflow: hidden;
+}
+#sect2::before {
+    content: "";
+
+    position: absolute;
+    top: 0%;    
+    left: 0%;
+    width: 100%;
+    height: 100%;
+
+    background-color: #b5c2d8;
+    background-image: url('../assets/cebpac_left.png');
+    background-repeat: no-repeat;    
+    background-position: left center;        
+    
+    z-index: -1;      
+}
+
+#sect3 {
+    position: relative;
+    overflow: hidden;
+}
+#sect3::before {
+    content: "";
+
+    position: absolute;
+    top: 0%;    
+    left: 0%;
+    width: 100%;
+    height: 100%;
+
+    background-color: #b5c2d8;
+    background-image: url('../assets/violin.jpg'),
+    linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2));
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: right center;        
+    
+    z-index: -1;     
 }
 
 #sect2-text {
     justify-self: start;
 }
 
-#main-img {
+.main-img {
     height: 100%;
     overflow: hidden;
+    position: absolute;
+}
+#phoebe-img-2 {
+    height: 70%;
+    left: 65%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    box-shadow: 0 0 10px #00000077;
+    border-radius: 10px;    
+
+    transition: height 0.5s ease,
+                box-shadow 0.5s ease;
+}
+#phoebe-img-2:hover {
+    height: 75%;   
+    box-shadow: 0 0 10px #ffffffff; 
 }
 
 #sect1-phoebe {
     padding: 0px;
 
     height: 100%;
+    width: 100%;
     overflow: hidden;
 
     justify-self: start;
+
+    position: relative;    
 }
 
 #cebpac-bg {
     position: absolute;
     left: 0;
     max-height: 75vh;    
+    
+    overflow: hidden;
 }
 
 #sect2-text {
@@ -111,9 +176,10 @@ p {
     text-decoration: none;
 }
 
-@media screen and (max-aspect-ratio: 1) {
+@media screen and (max-aspect-ratio: 1.27) {
     .sect {
         grid-auto-flow: row;
+        height: 100vh;
     }
 
     #sect1 {
@@ -124,7 +190,23 @@ p {
 
     #sect2 {
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .main-img, #phoebe-img-2 {
+        position: relative;
+        top: 0; left: 0;
+        transform: none;
+    }
+
+    #sect1-phoebe.sect-partition {
+        flex-direction: row-reverse;
+        justify-content: space-evenly;
+    }
+
+    #sect2-spacing {
+        display: none;
     }
 
     #sect2-phoebe {
