@@ -4,8 +4,8 @@ window.addEventListener('scroll', () => {
     const parallaxBg = document.querySelector('#header-sect');
   
     // Adjust the parallax speed factor (e.g., 0.5 for half speed)
-    const speedFactor = -0.2;
-    const bgSpeedFactor = 0.015;
+    const speedFactor = 0.15;
+    const bgSpeedFactor = 0.05;
   
     // Update the image position relative to scroll
     parallaxImg.style.transform = `translateY(${scrollTop * speedFactor}px) translateX(-50%)`;

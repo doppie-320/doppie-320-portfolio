@@ -76,6 +76,9 @@ p {
     position: relative;
     overflow: hidden;
 }
+#sect2 p {
+    text-shadow: 0 0 10px black;
+}
 #sect2::before {
     content: "";
 
@@ -96,6 +99,7 @@ p {
 #sect3 {
     position: relative;
     overflow: hidden;
+    grid-template-columns: 1fr 1fr;
 }
 #sect3::before {
     content: "";
@@ -108,6 +112,30 @@ p {
 
     background-color: #b5c2d8;
     background-image: url('../assets/violin.jpg'),
+    linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2));
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center center;        
+    
+    z-index: -1;     
+}
+
+#sect4 {
+    position: relative;
+    overflow: hidden;
+    grid-template-columns: 1.5fr 1fr;
+}
+#sect4::before {
+    content: "";
+
+    position: absolute;
+    top: 0%;    
+    left: -10%;
+    width: 120%;
+    height: 120%;
+
+    background-color: #b5c2d8;
+    background-image: url('../assets/archery.jpg'),
     linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2));
     background-blend-mode: multiply;
     background-size: cover;
@@ -192,6 +220,11 @@ p {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        grid-template-columns: none;
+    }
+
+    #sect3, #sect4 {
+        grid-template-columns: none;
     }
 
     .main-img, #phoebe-img-2 {
@@ -205,7 +238,7 @@ p {
         justify-content: space-evenly;
     }
 
-    #sect2-spacing {
+    #sect4-spacing, #sect2-spacing {
         display: none;
     }
 
