@@ -250,3 +250,9 @@ p {
         justify-self: inherit;
     }
 }
+
+@media screen and (max-height: 600px) {
+    .sect {
+        height: 100%;
+    }
+}
