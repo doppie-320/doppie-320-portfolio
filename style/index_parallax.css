@@ -14,9 +14,11 @@
     width: 120%;
     height: 120%;
 
-    background-image: url('../assets/talikod/talikod_bg.png');
+    background-image: url('../assets/talikod/talikod_bg.png'), 
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));    
     background-size: cover;
     background-position: center;
+    background-blend-mode: darken;
     filter: blur(10px);
     
     z-index: -1;    

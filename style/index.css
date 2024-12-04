@@ -1,15 +1,15 @@
 * {
     box-sizing: border-box;
+    
 }
 
 html {
     scroll-behavior: smooth;
 }
 
-body {
+body {    
     margin: 0;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    color: white;    
 }
 
 h1,
@@ -23,6 +23,16 @@ blockquote,
 li {
     margin-top: 0.2em;
     margin-bottom: 0.2em;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Bebas Neue", sans-serif;    
+}
+h1 {
+    font-size: 3em;
+}
+p {
+    font-family: "Open Sans";
 }
 
 .sect {
@@ -59,7 +69,7 @@ li {
 }
 
 #sect2 {
-    background-color: rgb(0, 0, 0);
+    background-color: #afb8c7;    
     grid-template-columns: 1fr 1fr;    
 }
 
@@ -81,13 +91,14 @@ li {
     justify-self: start;
 }
 
-#sect2-phoebe {
-    padding: 0px;
+#cebpac-bg {
+    position: absolute;
+    left: 0;
+    max-height: 75vh;    
+}
 
-    height: 100%;
-    overflow: hidden;
-
-    justify-self: end;
+#sect2-text {
+    z-index: 1;
 }
 
 #downbutton {
@@ -100,9 +111,9 @@ li {
     text-decoration: none;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-aspect-ratio: 1) {
     .sect {
-        grid-auto-flow: row;       
+        grid-auto-flow: row;
     }
 
     #sect1 {
