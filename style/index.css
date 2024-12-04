@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+li {
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+}
+
+.sect {
+    display: grid;
+    grid-auto-flow: column;
+    justify-items: center;
+
+    height: 75vh;
+    width: 100%;
+}
+
+.sect-partition {
+    display: flex;
+    flex-direction: column;
+
+    padding: 50px;
+}
+
+.s-p-horizontal-center {
+    align-items: center;
+}
+
+.s-p-vertical-center {
+    align-self: center;
+}
+
+#sect1 {
+    background-color: rgb(59, 70, 92);
+    background: linear-gradient(45deg,
+            #fc27c6,
+            #ff2e62);
+
+    grid-template-columns: 1fr 1fr;
+}
+
+#sect2 {
+    background-color: rgb(0, 0, 0);
+    grid-template-columns: 1fr 1fr;    
+}
+
+#sect2-text {
+    justify-self: start;
+}
+
+#main-img {
+    height: 100%;
+    overflow: hidden;
+}
+
+#sect1-phoebe {
+    padding: 0px;
+
+    height: 100%;
+    overflow: hidden;
+
+    justify-self: start;
+}
+
+#sect2-phoebe {
+    padding: 0px;
+
+    height: 100%;
+    overflow: hidden;
+
+    justify-self: end;
+}
+
+#downbutton {
+    color: inherit;
+    text-decoration: none;
+}
+
+#downbutton:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 1000px) {
+    .sect {
+        grid-auto-flow: row;       
+    }
+
+    #sect1 {
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: none;
+        justify-self: inherit;
+    }
+
+    #sect2 {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    #sect2-phoebe {
+        align-self: center;
+    }
+
+    #sect1-phoebe {
+        justify-self: inherit;
+    }
+}

@@ -1,0 +1,37 @@
+#header-sect {
+    position: relative;
+    overflow: hidden;
+
+    height: 100vh;
+}
+
+#header-sect::before {
+    content: "";
+
+    position: absolute;
+    top: -10%;    
+    left: -10%;
+    width: 120%;
+    height: 120%;
+
+    background-image: url('../assets/talikod/talikod_bg.png');
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);
+    
+    z-index: -1;    
+}
+
+#parallax-fg {
+    position: absolute;
+    bottom: -25%;
+    left: 50%;
+    height: 135vh;
+
+    object-fit: cover;
+    transform: translateY(0) translateX(-50%);       
+    
+    z-index: -1;
+
+    filter: blur(0px);
+}
