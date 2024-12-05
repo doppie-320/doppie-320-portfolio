@@ -26,9 +26,9 @@
 
 #parallax-fg {
     position: absolute;
-    bottom: -20%;
+    bottom: -30%;
     left: 50%;
-    height: 135vh;
+    height: 125vh;
 
     object-fit: cover;
     transform: translateY(0) translateX(-50%);       
