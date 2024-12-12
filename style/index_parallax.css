@@ -1,3 +1,7 @@
+:root {
+    --bgScroll: -10%;
+}
+
 #header-sect {
     position: relative;
     overflow: hidden;

@@ -206,6 +206,7 @@ p {
     text-decoration: none;
 }
 
+/* RESPONSIVENESS SHI */
 @media screen and (max-aspect-ratio: 1.27) {
     .sect {
         grid-auto-flow: row;
